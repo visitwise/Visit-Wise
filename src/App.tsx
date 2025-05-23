@@ -7,7 +7,7 @@ import ContactPage from './pages/ContactPage';
 
 function App() {
   useEffect(() => {
-    document.title = "VisitWise | Customer Recognition System";
+    document.title = "VisitWise";
   }, []);
 
   return (
