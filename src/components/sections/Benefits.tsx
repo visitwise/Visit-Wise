@@ -1,7 +1,20 @@
 import React from 'react';
 import { benefits } from '../../data/benefits';
 import Container from '../ui/Container';
-import * as LucideIcons from 'lucide-react';
+import {
+  Percent,
+  DollarSign,
+  Clock,
+  Users,
+  LucideIcon
+} from 'lucide-react';
+
+const iconMap: Record<string, LucideIcon> = {
+  Percent,
+  DollarSign,
+  Clock,
+  Users,
+};
 
 const Benefits: React.FC = () => {
   return (
@@ -16,11 +29,10 @@ const Benefits: React.FC = () => {
             after implementing our recognition system.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {benefits.map((benefit, index) => {
-            // Dynamically get the icon from Lucide
-            const IconComponent = LucideIcons[benefit.icon as keyof typeof LucideIcons];
+            const IconComponent = iconMap[benefit.icon];
 
             return (
               <div 
@@ -28,9 +40,7 @@ const Benefits: React.FC = () => {
                 className="flex items-start gap-6 transition-all duration-300 hover:translate-x-1"
               >
                 <div className="bg-white shadow-sm rounded-lg p-4 flex-shrink-0">
-                  {typeof IconComponent === 'function' && 'displayName' in IconComponent && (
-                    <IconComponent size={24} className="text-primary" />
-                  )}
+                  {IconComponent && <IconComponent size={24} className="text-primary" />}
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>

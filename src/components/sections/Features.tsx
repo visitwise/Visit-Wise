@@ -23,10 +23,7 @@ const Features: React.FC = () => {
             // Dynamically get the icon from Lucide
             const IconComponent = LucideIcons[feature.icon as keyof typeof LucideIcons];
 
-            const isValidIcon =
-              typeof IconComponent === 'function' &&
-              // @ts-ignore
-              (IconComponent.prototype?.isReactComponent || String(IconComponent).includes('return React.createElement'));
+            const isValidIcon = !!IconComponent;
 
             return (
               <Card key={index} hoverEffect className="flex flex-col h-full">
