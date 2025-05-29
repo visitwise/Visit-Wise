@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" onClick={() => handleNavigation('/contact')}>
-                Get Started
+                Contact Us
               </Button>
               <Button variant="ghost" size="lg" onClick={() => handleNavigation('/contact')}>
                 Watch Demo
@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
           <div className="hidden lg:block relative">
             <div className="relative z-10 rounded-xl overflow-hidden shadow-xl">
               <img 
-                src="https://images.pexels.com/photos/7681800/pexels-photo-7681800.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                src="/device.jpg" 
                 alt="Retail store employee assisting a customer" 
                 className="w-full h-auto object-cover"
                 loading="lazy"

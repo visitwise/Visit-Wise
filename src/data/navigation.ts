@@ -15,12 +15,8 @@ export const navigationItems: NavItem[] = [
     href: "/#benefits",
   },
   {
-    label: "Testimonials",
-    href: "/#testimonials",
-  },
-  {
-    label: "Pricing",
-    href: "/#pricing",
-  },
+    label: "Contact Us",
+    href: "/contact",
+  }
 
 ];

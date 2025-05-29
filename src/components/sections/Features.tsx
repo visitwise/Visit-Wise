@@ -22,12 +22,20 @@ const Features: React.FC = () => {
           {features.map((feature, index) => {
             // Dynamically get the icon from Lucide
             const IconComponent = LucideIcons[feature.icon as keyof typeof LucideIcons];
-            
+
+            const isValidIcon =
+              typeof IconComponent === 'function' &&
+              // @ts-ignore
+              (IconComponent.prototype?.isReactComponent || String(IconComponent).includes('return React.createElement'));
+
             return (
               <Card key={index} hoverEffect className="flex flex-col h-full">
                 <div className="mb-6">
                   <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                    {IconComponent && <IconComponent size={24} className="text-primary" />}
+                    {isValidIcon && (
+                      // @ts-ignore
+                      <IconComponent size={24} className="text-primary" />
+                    )}
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                   <p className="text-secondary/80">{feature.description}</p>

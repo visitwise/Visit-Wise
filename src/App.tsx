@@ -4,8 +4,11 @@ import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
+import Request from './pages/Request';
+
 
 function App() {
+
   useEffect(() => {
     document.title = "VisitWise";
   }, []);
@@ -17,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/request-demo" element={<Request />} />
         </Routes>
         <Footer />
       </div>

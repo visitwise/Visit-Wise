@@ -1,5 +1,5 @@
 import { Mail, MapPinIcon, Phone } from "lucide-react";
-import ContactUsForm from "../components/ContactUsForm";
+import ContactUsForm from "../components/DemoForm";
 
 const ContactPage = () => {
   return (

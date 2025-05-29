@@ -33,8 +33,8 @@ const Header: React.FC = () => {
     }
   }, [location.hash]);
   
-  const handleGetStartedClick = () => {
-    navigate('/contact');
+  const handleRequestDemoClick = () => {
+    navigate('/request-demo');
   };
   
   const handleScrollToTop = () => {
@@ -79,8 +79,8 @@ const Header: React.FC = () => {
           </nav>
           
           <div className="hidden md:block">
-            <button onClick={handleGetStartedClick}>
-              <Button>Get Started</Button>
+            <button onClick={handleRequestDemoClick}>
+              <Button>Request Demo</Button>
             </button>
           </div>
           
@@ -116,8 +116,8 @@ const Header: React.FC = () => {
                 </Link>
               ))}
               <div className="pt-2">
-                <button onClick={handleGetStartedClick}>
-                  <Button className="w-full">Get Started</Button>
+                <button onClick={handleRequestDemoClick}>
+                  <Button className="w-full">Request Demo</Button>
                 </button>
               </div>
             </nav>

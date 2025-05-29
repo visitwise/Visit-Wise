@@ -15,7 +15,7 @@ export const pricingTiers: PricingTier[] = [
       "1 retail location",
       "3 user accounts",
     ],
-    cta: "Get Started",
+    cta: "Contact Us",
   },
   {
     name: "Professional",
@@ -34,7 +34,7 @@ export const pricingTiers: PricingTier[] = [
       "10 user accounts",
       "Basic analytics",
     ],
-    cta: "Get Started",
+    cta: "Contact Us",
     isPopular: true,
   },
   {
