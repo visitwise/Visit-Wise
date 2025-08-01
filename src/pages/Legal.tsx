@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import api from '../axios';
 
 const LegalPage: React.FC = () => {
-  const { type } = useParams<{ type: string }>();
+  const { type } = useParams<{ type: any }>();
   const [content, setContent] = useState<string>('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
