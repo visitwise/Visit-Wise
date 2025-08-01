@@ -13,19 +13,11 @@ export const footerColumns: FooterColumn[] = [
   {
     title: "Legal",
     links: [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms of Service", href: "#" },
-      { label: "Security", href: "#" },
-      { label: "Compliance", href: "#" },
+      { label: "Privacy Policy", href: "/legal/privacy" },
+      { label: "Terms of Service", href: "/legal/terms" },
+      { label: "Security", href: "/legal/security" },
+      { label: "Compliance", href: "/legal/compliance" },
     ],
-  },
-  {
-    title: "Social Media",
-    links: [
-      { label: "Facebook", href: "https://facebook.com" },
-      { label: "Twitter", href: "https://twitter.com" },
-      { label: "LinkedIn", href: "https://linkedin.com" },
-      { label: "Instagram", href: "https://instagram.com" },
-    ],
-  },
+  }
+  // Removed "Social Media"
 ];

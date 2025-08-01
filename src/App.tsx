@@ -5,6 +5,7 @@ import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import RequestDemo from './pages/Request';
+import LegalPage from './pages/Legal';
 function App() {
   useEffect(() => {
     document.title = "VisitWise";
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/request-demo" element={<RequestDemo />} />
+          <Route path='/legal/:type' element={<LegalPage/>} />
         </Routes>
         <Footer />
       </div>
